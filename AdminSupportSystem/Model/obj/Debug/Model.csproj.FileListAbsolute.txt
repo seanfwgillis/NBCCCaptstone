@@ -1,0 +1,5 @@
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Model\bin\Debug\Model.dll
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Model\bin\Debug\Model.pdb
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Model\obj\Debug\Model.dll
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Model\obj\Debug\Model.pdb

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Web.AdminSupportSystem.Models.ReviewIndexVM>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="display-4 text-center">Employee Reviews</div>
+<hr />
+
+<div class="container-fluid">
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark text-center" style="overflow: hidden; white-space: nowrap;">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FullName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.JobName)
+                </th>
+                <th>Review Status</th>
+            </tr>
+        </thead>
+
+        @foreach (var item in Model)
+        {
+            <tbody class="text-center">
+                <tr>
+                    @if (item.HasReviewPending)
+                    {
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FullName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.JobName)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Create Review", "Create", "Review", new { id = item.EmployeeId }, new { @class = "text-center" })
+                        </td>
+                    }
+
+                </tr>
+            </tbody>
+        }
+
+    </table>
+</div>

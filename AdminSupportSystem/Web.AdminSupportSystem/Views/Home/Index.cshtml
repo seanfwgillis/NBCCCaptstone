@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+    <div class="jumbotron text-center" style="margin-top: 25px">
+        <h1>Administration Support System</h1>
+        <p class="lead">This system is to facilitate the administration of all employee and purchase order management. </p>
+        @if (Session["EmployeeId"] == null)
+        {
+            <p>@Html.ActionLink("Login", "Login", "Login", null, new { @class = "btn btn-primary btn-lg" })</p>
+        }
+        else
+        {
+            <p>You are currently logged in. Welcome @Session["Name"]!</p>
+            <p>@Html.ActionLink("Logout", "Logout", "Login", null, new { @class = "btn btn-primary btn-lg" })</p>
+        }
+
+    </div>

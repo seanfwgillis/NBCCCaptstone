@@ -1,0 +1,90 @@
+﻿@model IEnumerable<Web.AdminSupportSystem.Models.ItemVM>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="display-4 text-center">Item Details</div>
+<hr />
+<div class="container-fluid">
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark text-center" style="overflow: hidden; white-space: nowrap;">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.POId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ItemStatus)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UnitPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Location)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Justification)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Quantity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ItemTotal)
+                </th>
+            </tr>
+        </thead>
+
+        @foreach (var item in Model)
+        {
+            <tbody class="text-center">
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.POId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ItemStatus)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UnitPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Location)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Justification)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Quantity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ItemTotal)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Add an item", "Create", "Item", new { @class = "text-center" })
+
+                    </td>
+                </tr>
+            </tbody>
+        }
+
+    </table>
+</div>

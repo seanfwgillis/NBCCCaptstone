@@ -1,0 +1,33 @@
+﻿@model Model.Review
+
+@{
+    ViewBag.Title = "PersonalReviewDetails";
+}
+
+    <div class="display-4 text-center">Review Details</div>
+    <p class="text-center"> for @Html.DisplayFor(model => model.Date)</p>
+    <hr />
+<div>
+    
+    <dl class="dl-horizontal text-center">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rating) Expectations
+        </dd>
+
+    </dl>
+</div>
+<div class="text-center">
+    @Html.ActionLink("Go Back to Personal Reviews Page", "PersonalReviews")
+</div>

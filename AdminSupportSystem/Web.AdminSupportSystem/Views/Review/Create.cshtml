@@ -1,0 +1,86 @@
+﻿@model Web.AdminSupportSystem.Models.ReviewCreateVM
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="display-4 text-center">Assessment Review</div>
+@if (Model.IsSuccessful == null)
+{
+    <p class=" text-center">
+        Welcome @Html.DisplayFor(model => model.SupervisorName)!
+        You are reviewing @Html.DisplayFor(model => model.EmployeeName).
+    </p>
+    <hr />
+
+    using (Html.BeginForm("Create", "Review", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.Review.EmployeeId)
+            @Html.HiddenFor(model => model.Review.SupervisorId)
+            @Html.HiddenFor(model => model.EmployeeName)
+            <div class="form-row text-center">
+                <div class="col-4"></div>
+                <div class="form-group col-4">
+                    <b>@Html.LabelFor(model => model.Review.Rating, htmlAttributes: new { @class = "control-label col-md-2" })</b>
+                    <div>
+                        @Html.DropDownListFor(model => model.Review.Rating, Model.Ratings, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Review.Rating, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="col-5"></div>
+            </div>
+            <div class="form-row text-center">
+                <div class="col-5"></div>
+                <div class="form-group col-2">
+                    <b>@Html.LabelFor(model => model.Review.Date, htmlAttributes: new { @class = "control-label" })</b>
+                    <div>
+                        @Html.EditorFor(model => model.Review.Date, new { htmlAttributes = new { @class = "form-control", @style = "max-width: 100%"  } })
+                        @Html.ValidationMessageFor(model => model.Review.Date, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="col-5"></div>
+            </div>
+            <div class="form-row text-center">
+                <div class="form-group col-12">
+                    <b>@Html.LabelFor(model => model.Review.Comments, htmlAttributes: new { @class = "control-label col-md-2" })</b>
+                    <div>
+                        @Html.EditorFor(model => model.Review.Comments, new { htmlAttributes = new { @class = "form-control", @style = "max-width: 100%" } })
+                        @Html.ValidationMessageFor(model => model.Review.Comments, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-group text-center">
+                <div>
+                    <input type="submit" value="Submit" class="btn btn-default" style="border:solid; border-color:darkgray; border-width:thin" />
+                </div>
+            </div>
+        </div>
+    }
+}
+else if (Model.IsSuccessful == true)
+{
+    <p class="text-center text-success">Review for @Html.DisplayFor(model => model.EmployeeName) complete.</p>
+}
+else
+{
+    foreach (var item in Model.Review.ValErrors)
+    {
+        <p class="text-center text-danger">Error: @item.ErrorDescription.</p>
+    }
+
+}
+<div class="text-center">
+    @Html.ActionLink("Back to Employee Reviews", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

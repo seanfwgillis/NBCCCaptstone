@@ -1,0 +1,8 @@
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\DAL\bin\Debug\DAL.dll
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\DAL\bin\Debug\DAL.pdb
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\DAL\bin\Debug\Types.dll
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\DAL\bin\Debug\Types.pdb
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\DAL\obj\Debug\DAL.dll
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\DAL\obj\Debug\DAL.pdb

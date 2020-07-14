@@ -1,0 +1,14 @@
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Service\bin\Debug\Service.dll
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Service\bin\Debug\Service.pdb
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Service\bin\Debug\Model.dll
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Service\bin\Debug\Repository.dll
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Service\bin\Debug\Types.dll
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Service\bin\Debug\DAL.dll
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Service\bin\Debug\Model.pdb
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Service\bin\Debug\Repository.pdb
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Service\bin\Debug\Types.pdb
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Service\bin\Debug\DAL.pdb
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Service\obj\Debug\Service.csprojAssemblyReference.cache
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Service\obj\Debug\Service.csproj.CopyComplete
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Service\obj\Debug\Service.dll
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Service\obj\Debug\Service.pdb

@@ -1,0 +1,119 @@
+﻿@model Web.AdminSupportSystem.Models.PersonalInfoVM
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<div class="display-4 text-center">Modify Personal Details</div>
+<p class=" text-center">Welcome @Html.DisplayFor(model => model.FullName)!</p>
+<hr />
+@if (Model.IsSuccessful == null)
+{
+    using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            @Html.HiddenFor(model => model.Employee.Id)
+            @Html.HiddenFor(model => model.Employee.Department)
+            @Html.HiddenFor(model => model.Employee.Supervisor)
+            @Html.HiddenFor(model => model.Employee.LastName)
+            @Html.HiddenFor(model => model.Employee.FirstName)
+            @Html.HiddenFor(model => model.Employee.MiddleInitial)
+            @Html.HiddenFor(model => model.Employee.DOB)
+            @Html.HiddenFor(model => model.Employee.SIN)
+            @Html.HiddenFor(model => model.Employee.SeniorityDate)
+            @Html.HiddenFor(model => model.Employee.JobAssignment)
+            @Html.HiddenFor(model => model.Employee.StartDate)
+            @Html.HiddenFor(model => model.Employee.Status)
+            @Html.HiddenFor(model => model.Employee.IsSupervisor)
+            @Html.HiddenFor(model => model.Employee.EndDate)
+            @Html.HiddenFor(model => model.Employee.TimeStamp)
+            <div class="form-row">
+                <div class="form-group col-5 mx-auto">
+                    <div>
+                        @Html.LabelFor(model => model.Employee.StreetAddress, htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.Employee.StreetAddress, new { htmlAttributes = new { @class = "form-control", @style = "max-width: 100%" } })
+                        @Html.ValidationMessageFor(model => model.Employee.StreetAddress, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group col-3 mx-auto">
+                    <div>
+                        @Html.LabelFor(model => model.Employee.City, htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.Employee.City, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Employee.City, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group col-2 mx-auto">
+
+                    <div>
+                        @Html.LabelFor(model => model.Employee.Country, htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.Employee.Country, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Employee.Country, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group col-2 mx-auto">
+
+                    <div>
+                        @Html.LabelFor(model => model.Employee.ProvState, htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.Employee.ProvState, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Employee.ProvState, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-3 mx-auto">
+
+                    <div>
+                        @Html.LabelFor(model => model.Employee.PostalZip, htmlAttributes: new { @class = "control-label " })
+                        @Html.EditorFor(model => model.Employee.PostalZip, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Employee.PostalZip, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group col-3 mx-auto">
+
+                    <div>
+                        @Html.LabelFor(model => model.Employee.WorkPhoneNumber, htmlAttributes: new { @class = "control-label " })
+                        @Html.EditorFor(model => model.Employee.WorkPhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Employee.WorkPhoneNumber, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group col-3 mx-auto">
+
+                    <div>
+                        @Html.LabelFor(model => model.Employee.CellPhoneNumber, htmlAttributes: new { @class = "control-label " })
+                        @Html.EditorFor(model => model.Employee.CellPhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Employee.CellPhoneNumber, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group col-3 mx-auto">
+
+                    <div>
+                        @Html.LabelFor(model => model.Employee.Email, htmlAttributes: new { @class = "control-label " })
+                        @Html.EditorFor(model => model.Employee.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Employee.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="form-group text-center">
+                <div>
+                    <input type="submit" value="Save" class="btn btn-default" style="border:solid; border-color:darkgray; border-width:thin" />
+                </div>
+            </div>
+        </div>
+    }
+}
+else
+{
+    <p class="text-center text-success">Employee has been modified successfully!</p>
+}
+<div class="text-center">
+    @Html.ActionLink("Go Back to Search Employee Page", "SearchEmployee")
+</div>

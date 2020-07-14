@@ -1,0 +1,12 @@
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Repository\bin\Debug\Repository.dll
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Repository\bin\Debug\Repository.pdb
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Repository\bin\Debug\DAL.dll
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Repository\bin\Debug\Model.dll
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Repository\bin\Debug\Types.dll
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Repository\bin\Debug\DAL.pdb
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Repository\bin\Debug\Model.pdb
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Repository\bin\Debug\Types.pdb
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Repository\obj\Debug\Repository.csprojAssemblyReference.cache
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Repository\obj\Debug\Repository.csproj.CopyComplete
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Repository\obj\Debug\Repository.dll
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Repository\obj\Debug\Repository.pdb

@@ -1,0 +1,5 @@
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Types\bin\Debug\Types.dll
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Types\bin\Debug\Types.pdb
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Types\obj\Debug\Types.csprojAssemblyReference.cache
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Types\obj\Debug\Types.dll
+C:\capstone-seanandshae\Application\Desktop\AdminSupportSystem\Types\obj\Debug\Types.pdb

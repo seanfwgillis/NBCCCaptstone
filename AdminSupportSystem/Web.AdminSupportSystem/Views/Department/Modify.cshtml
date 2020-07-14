@@ -1,0 +1,118 @@
+﻿@model Web.AdminSupportSystem.Models.DepartmentModifyVM
+
+@{
+    ViewBag.Title = "Modify";
+}
+
+<div class="display-4 text-center">Modify Department Details</div>
+<hr />
+@using (Html.BeginForm("Modify", "Department", new { @class = "text-center" }))
+{
+    <div class="h4 text-center">
+        @Html.LabelFor(model => model.Departments, htmlAttributes: new { @class = "text-center" })
+    </div>
+    <p class="text-center">
+        @if (Session["Credential"].ToString() == "HRSup")
+        {
+            @Html.DropDownListFor(m => m.DepartmentId,
+               new SelectList(Model.Departments, "Value", "Text"), "---Select Department---",
+               new { @class = "text-center", onChange = "this.form.submit()" })
+        }
+        else
+        {
+            @Html.DropDownListFor(m => m.DepartmentId,
+               new SelectList(Model.Departments, "Value", "Text"),
+               new
+                    {
+                        disabled = "disabled",
+                        @readonly = "readonly",
+                   @class = "text-center",
+                        onChange = "this.form.submit()"
+                    })
+        }
+
+    </p>
+
+}
+@if (Model.IsSuccessful == null)
+{
+    using (Html.BeginForm("Edit", "Department", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.Department.Id)
+            @Html.HiddenFor(model => model.Department.TimeStamp)
+            <div class="form-row">
+                <div class="form-group col-3 mx-auto">
+                    <div>
+                        @Html.LabelFor(model => model.Department.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                        @if (Session["Credential"].ToString() == "HRSup" && Model.Department != null)
+                        {
+                            @Html.EditorFor(model => model.Department.Name, new { htmlAttributes = new { @class = "form-control" } })
+                        }
+                        else
+                        {
+                            @Html.EditorFor(model => model.Department.Name,
+                         new { htmlAttributes = new { @readonly = "readonly", @class = "form-control" } })
+                        }
+
+                        @Html.ValidationMessageFor(model => model.Department.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group col-6 mx-auto">
+                    <div>
+                        @Html.LabelFor(model => model.Department.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+                        @if (Model.Department != null)
+                        {
+                            @Html.EditorFor(model => model.Department.Description, new { htmlAttributes = new { @class = "form-control", @style = "min-width: 100%" } })
+                        }
+                        else
+                        {
+                            @Html.EditorFor(model => model.Department.Description, new { htmlAttributes = new { @readonly = "readonly", @class = "form-control", @style = "min-width: 100%" } })
+                        }
+
+                        @Html.ValidationMessageFor(model => model.Department.Description, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group col-3 mx-auto">
+                    <div>
+                        @Html.LabelFor(model => model.Department.InvocationDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                        @if (Session["Credential"].ToString() == "HRSup" && Model.Department != null)
+                        {
+                            @Html.EditorFor(model => model.Department.InvocationDate, new { htmlAttributes = new { @class = "form-control" } })
+                        }
+                        else
+                        {
+                            @Html.EditorFor(model => model.Department.InvocationDate,
+                        new { htmlAttributes = new { @readonly = "readonly", @class = "form-control" } })
+                        }
+
+                        @Html.ValidationMessageFor(model => model.Department.InvocationDate, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            @if (Model.Department != null)
+            {
+                <div class="form-group text-center">
+                    <div>
+                        <input type="submit" value="Save" class="btn btn-default" style="border:solid; border-color:darkgray; border-width:thin" />
+                    </div>
+                </div>
+            }
+
+        </div>
+    }
+}
+else
+{
+    <p class="text-center text-success">Department has been modified successfully!</p>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
